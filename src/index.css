@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f0f4fc;
+  color: #333;
+  min-height: 100vh;
+}
+
+header {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  letter-spacing: 0.1rem;
+  color: #4d4d4d;
+}
+
+form {
+  width: 90%;
+  max-width: 36rem;
+  margin: 3rem auto;
+  padding: 2.8rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  font-size: 1.6rem;
+  color: #4e4e4e;
+  letter-spacing: 0.06rem;
+  margin-bottom: 1.5rem;
+}
+
+.control,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+.control.no-margin {
+  margin-bottom: 0;
+}
+
+.control label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.control input,
+.control select {
+  display: block;
+  width: 100%;
+  max-width: 18rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #b3b3b3;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.control:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+}
+
+.control:has(input[type="checkbox"]) label {
+  margin: 0;
+}
+
+.control input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  max-width: none;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #b3b3b3;
+  background-color: #fff;
+  color: #333;
+}
+
+.control-error {
+  color: #e85d75;
+  font-size: 0.9rem;
+  height: 2rem;
+  padding: 0.5rem 0;
+}
+
+.control-error p {
+  margin: 0;
+}
+
+.control-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #6a71cc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #4d4f9e;
+}
+
+.button-flat {
+  background-color: transparent;
+  color: #666;
+}
+
+.button-flat:hover,
+.button-flat:focus {
+  color: #fff;
+}
