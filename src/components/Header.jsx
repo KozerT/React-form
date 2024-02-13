@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header>
-      <h1>React Forms</h1>
+      <h1>React Form</h1>
     </header>
   );
 };

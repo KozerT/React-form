@@ -50,10 +50,6 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
-.control.no-margin {
-  margin-bottom: 0;
-}
-
 .control label {
   display: block;
   font-size: 1rem;
