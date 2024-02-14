@@ -3,13 +3,13 @@ import React from "react";
 const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const fd = new FormData(event.target); // to make formData work, all form inputs should have "name" prop/attribute added;
     const acquisitionChannel = fd.getAll("acquisition");
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionChannel;
-
     console.log(data);
+
+    event.target.reset(); // to reset
   };
 
   return (
