@@ -92,11 +92,20 @@ fieldset {
   color: #333;
 }
 
+.password-input {
+  position: relative;
+}
+
+.password-input.with-error {
+  margin-bottom: 4rem;
+}
+
 .control-error {
+  position: absolute;
   color: #e85d75;
   font-size: 0.9rem;
   height: 2rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0rem;
 }
 
 .control-error p {
