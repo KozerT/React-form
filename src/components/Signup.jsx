@@ -1,15 +1,20 @@
-import React from "react";
+import { useState } from "react";
 
 const Signup = () => {
+  const [passwordsNotEqual, setPasswordsNotEqual] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const fd = new FormData(event.target); // to make formData work, all form inputs should have "name" prop/attribute added;
     const acquisitionChannel = fd.getAll("acquisition");
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionChannel;
-    console.log(data);
 
-    event.target.reset(); // to reset
+    if (data.password !== data["confirm-password"]) {
+      //Important, "." notation won't work, since using "-" in the input name;
+      setPasswordsNotEqual(true);
+      return;
+    }
   };
 
   return (
@@ -41,8 +46,10 @@ const Signup = () => {
             type="password"
             name="confirm-password"
             required
-            minLength={6}
           />
+          <div className="control-error">
+            {passwordsNotEqual && <p>Passwords must match.</p>}
+          </div>
         </div>
       </div>
 
